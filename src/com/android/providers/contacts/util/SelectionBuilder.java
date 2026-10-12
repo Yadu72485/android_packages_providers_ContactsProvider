@@ -16,7 +16,6 @@
 
 package com.android.providers.contacts.util;
 
-import android.database.sqlite.SQLiteTokenizer;
 import android.text.TextUtils;
 
 import java.util.ArrayList;
@@ -45,7 +44,6 @@ public class SelectionBuilder {
      */
     public SelectionBuilder addClause(String clause) {
         if (!TextUtils.isEmpty(clause)) {
-            SQLiteTokenizer.tokenize(clause, SQLiteTokenizer.OPTION_CHECK_BRACKETS, null);
             mWhereClauses.add(clause);
         }
         return this;
